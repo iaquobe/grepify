@@ -21,18 +21,18 @@ https://developer.spotify.com/documentation/web-api/\
 under Dashboard\
 and:\
 https://docs.genius.com/
-under Manage Clients\
+under Manage Clients
 
 now save the the keys in `./api/spotify/client-id`, 
 `./api/spotify/client-secret`, and `./api/genius/client-access-token`
 
 ### Storing the lyrics
 
-By default the lyrics are stored in `./lyrics/`.\
+By default the lyrics are stored in `./lyrics/`.
 If you want it another way change `api_dir` in spotygrep.py
 
 the lyrics folder is structured as follows:\
-`./lyrics/PLAYLIST/ARTIST/SONG`\
+`./lyrics/PLAYLIST/ARTIST/SONG`
 
 ## Getting started
 
@@ -42,13 +42,13 @@ The only way to use is running:\
 The `playlist_id` is the last string in the webplayer when you have the playlist open.
 
 depending on the size of the playlist it could take a couple of minutes.\
-I ran it on a Playlist with approx. 100 songs and it took about 5-10min. (again: I'll be trying to improve the time)\
+I ran it on a Playlist with approx. 100 songs and it took about 5-10min. (again: I'll be trying to improve the time)
 
 If you are as unpatient as I am you can repeatedly run: `ls lyrics/PLAYLIST/*/* | wc -l` to check how many lyrics you've downloaded.\
-Note that all names (playlist, artist, song) are stripped of any characters that fit: `[^A-Za-z0-9]`\
+Note that all names (playlist, artist, song) are stripped of any characters that fit: `[^A-Za-z0-9]`
 
 Once you finished downloading the lyrics you can simply run:\
-`grep ... lyrics/PLAYLIST/*/*`\
+`grep ... lyrics/PLAYLIST/*/*`
 
 # TODO
 
