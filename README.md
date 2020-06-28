@@ -39,7 +39,7 @@ the lyrics folder is structured as follows:\
 ### Dependencies
 
 to work you'll need to install the Genius and the Spotify Python API\
-this can be done with:\
+this can be done with:
 ```
 pip install spotipy
 pip install lyricsgenius
