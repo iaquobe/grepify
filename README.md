@@ -36,6 +36,15 @@ the lyrics folder is structured as follows:\
 
 ## Getting started
 
+### Dependencies
+
+to work you'll need to install the Genius and the Spotify Python API\
+this can be done with:\
+```
+pip install spotipy
+pip install lyricsgenius
+```
+
 For now spotifgrep only downloads lyrics into the aformentioned file structure.\
 The only way to use is running:\
 `python spotigrep.py [PLAYLIST_ID]`\

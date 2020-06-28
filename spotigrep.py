@@ -17,17 +17,6 @@ def get_credentials():
              return id_file.readline(),secret_file.readline(),token_file.readline()
 
 
-# initializing api
-sci, scs, gct= get_credentials()
-
-#spotify api
-credentials = SpotifyClientCredentials(client_id=sci, client_secret=scs)
-sp = spotipy.Spotify(client_credentials_manager=credentials)
-
-#genius api
-gn = lyricsgenius.Genius(gct)
-gn.verbose=False
-
 
 def get_tracks(tracks):
     def get_ctracks(ctracks, res):
@@ -47,6 +36,7 @@ def get_tracks(tracks):
         tracks = sp.next(tracks)
         res = get_ctracks(tracks, res)
     return res 
+
 
 
 def save_lyrics(tracks, playlist_dir):
@@ -69,6 +59,17 @@ def save_lyrics(tracks, playlist_dir):
                     
 
 
+# initializing api
+sci, scs, gct= get_credentials()
+
+#spotify api
+credentials = SpotifyClientCredentials(client_id=sci, client_secret=scs)
+sp = spotipy.Spotify(client_credentials_manager=credentials)
+
+#genius api
+gn = lyricsgenius.Genius(gct)
+gn.verbose=False
+
 #create directories if they dont exist
 if not os.path.isdir(lyrics_dir):
     os.mkdir(lyrics_dir)
@@ -79,7 +80,6 @@ playlist_id = sys.argv[-1]
 playlist = sp.playlist(playlist_id)
 
 playlist_dir = lyrics_dir + re.sub("[^A-Za-z0-9_]+","",playlist['name']) + "/"
-print(playlist_dir)
 if not os.path.isdir(playlist_dir):
     os.mkdir(playlist_dir)
 
@@ -87,7 +87,3 @@ if not os.path.isdir(playlist_dir):
 tracks = get_tracks(playlist['tracks'])
 save_lyrics(tracks, playlist_dir)
 
-
-# for artist_name, track_list in tracks.items():
-#    for track in track_list:
-#       print("%s , %s" % (artist_name,track))
