@@ -5,7 +5,7 @@ Because there is no better way to search things than with a regex.
 
 # Usage
 
-Right now `spotigrep` is just a proof of concept, here are the limitations that come with it:\
+Right now `spotigrep` is just a proof of concept, here are the limitations that come with it:
 * there is no installation
 * the genius api is downloading at painfully slow speed (I'll look into that soon)
 * you need to run it from the git root (the file references need it that way)
@@ -14,17 +14,11 @@ Right now `spotigrep` is just a proof of concept, here are the limitations that 
 
 ### API keys
 
-first you need api keys for `Spotify` and `Genius`
+I've added my API keys to the repo. You can stil change them if you want to though.\
+Just paste the `client-id` and `client-secret` as plain text in `./api/spotify`.\
+And `client-secret` for the genius api in `./api/genius`.
 
-You can get both for free at:\
-https://developer.spotify.com/documentation/web-api/\
-under Dashboard\
-and:\
-https://docs.genius.com/
-under Manage Clients
-
-now save the the keys in `./api/spotify/client-id`, 
-`./api/spotify/client-secret`, and `./api/genius/client-access-token`
+You can get api keys for free on http://genius.com/api-clients and https://developer.spotify.com/dashboard/login
 
 ### Storing the lyrics
 
