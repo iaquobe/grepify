@@ -5,10 +5,12 @@ Because there is no better way to search things than with a regex.
 
 # Usage
 
-Right now `spotigrep` is just a proof of concept, here are the limitations that come with it:\
-* there is no installation
-* the genius api is downloading at painfully slow speed (I'll look into that soon)
-* you need to run it from the git root (the file references need it that way)
+To be able to grep through lyrics you'll first need to download them.
+You can do that with `spotigrep.py --download [playlist ID]`. 
+The Genius API is quite slow so it will take a while. 
+Next you can search for lyrics using: `spotigrep.py --search [regex]`\
+You can also restrict which artist/playlist is to be searched with `-a/--artist` and `-p/--playlist`
+
 
 ## Setup
 
