@@ -11,22 +11,15 @@ The Genius API is quite slow so it will take a while.
 Next you can search for lyrics using: `spotigrep.py --search [regex]`\
 You can also restrict which artist/playlist is to be searched with `-a/--artist` and `-p/--playlist`
 
-
 ## Setup
 
 ### API keys
 
-first you need api keys for `Spotify` and `Genius`
+I've added my API keys to the repo. You can stil change them if you want to though.\
+Just paste the `client-id` and `client-secret` as plain text in `./api/spotify`.\
+And `client-secret` for the genius api in `./api/genius`.
 
-You can get both for free at:\
-https://developer.spotify.com/documentation/web-api/\
-under Dashboard\
-and:\
-https://docs.genius.com/
-under Manage Clients
-
-now save the the keys in `./api/spotify/client-id`, 
-`./api/spotify/client-secret`, and `./api/genius/client-access-token`
+You can get api keys for free on http://genius.com/api-clients and https://developer.spotify.com/dashboard/login
 
 ### Storing the lyrics
 
