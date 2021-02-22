@@ -92,7 +92,7 @@ def download(playlist_id):
 
 
 def search(regex, playlist, artist):
-    subprocess.run("grep %s ./lyrics/%s/%s/*" % (regex, playlist, artist), shell=True)
+    subprocess.run("grep \"%s\" ./lyrics/%s/%s/*" % (regex, playlist, artist), shell=True)
 
 
 
